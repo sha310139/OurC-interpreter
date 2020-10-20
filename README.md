@@ -57,10 +57,12 @@ enter後將顯示互動式介面資訊<br>
 <img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG" alt="Sample"  width="500">
 <br>
 <br>
+-----------------------------------------------------------------<br>
 陣列及迴圈運算<br>
 <img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/3.JPG" alt="Sample"  width="300">
 <br>
 <br>
+-----------------------------------------------------------------<br>
 function defined、執行、error顯示及功能函數運算<br>
 <img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/5.JPG" alt="Sample"  width="500">
 <br>
