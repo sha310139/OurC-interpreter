@@ -53,7 +53,15 @@ enter後將顯示互動式介面資訊<br>
 <br>
 
 ## I/O範例
+簡單function defined及執行<br>
 ![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG)
+<br>
+<br>
+陣列及迴圈運算<br>
 ![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/3.JPG)
-![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/4.JPG)
+<br>
+<br>
+function defined、執行、error顯示及功能函數運算<br>
 ![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/5.JPG)
+<br>
+<br>
