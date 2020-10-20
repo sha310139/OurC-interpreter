@@ -1,5 +1,13 @@
 # OurC-interpreter
-一個約5000行的類C語言直譯器(可執行迴圈和functions)
+一個約5000行的類C語言直譯器(可執行迴圈和functions)<br>
+此專案為中原大學「程式語言」必修課之project 占分70%<br>
+共分成4個部分<br>
+Project 1為 基礎運算式檢查、求值及變數宣告<br>
+Project 2為 簡單C語言的文法檢查<br>
+Project 3為 Project 2的進階，需要確認文法的正確性並且求出值<br>
+Porject 4為 Project 3的進階，加上Call function並執行的功能<br>
+每個project會有10~16題的測試，每一題約有3~4個測試數據(包含可見數據及隱藏數據)<br>
+本人完成4個projects，通過所有測試，於此作業拿到滿分，且本班僅兩位滿分。<br>
 此為個人作品。<br>
 <br>
 <br>
@@ -11,6 +19,18 @@ Windows10<br>
 
 ## 開發環境
 Dev C++<br>
+<br>
+<br>
+
+
+## 功能
+* 根據輸入的字串，判斷是否為正確的C語言文法並求出運算值
+* 當輸入錯誤時會印出該錯誤之行數及錯誤類型
+* 提供 ListVariable("變數名稱")、ListAllVariables()、 ListFunction("名稱")、ListAllFunctions() 等4個功能函數
+* 可以根據輸入的字串 判斷是否為正確的C語言文法及輸出運算
+* 可以define functions(包含遞迴、function裡再call別的function等等)及執行functions
+* function參數傳遞支援call by reference & call by value
+* 輸入 Done(); 可使程式結束執行
 <br>
 <br>
 
