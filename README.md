@@ -54,14 +54,14 @@ enter後將顯示互動式介面資訊<br>
 
 ## I/O範例
 簡單function defined及執行<br>
-![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG)
+<img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG" alt="Sample"  width="250">
 <br>
 <br>
 陣列及迴圈運算<br>
-![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/3.JPG)
+<img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/3.JPG" alt="Sample"  width="250">
 <br>
 <br>
 function defined、執行、error顯示及功能函數運算<br>
-![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/5.JPG)
+<img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/5.JPG" alt="Sample"  width="250">
 <br>
 <br>
