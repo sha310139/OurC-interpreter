@@ -53,4 +53,7 @@ enter後將顯示互動式介面資訊<br>
 <br>
 
 ## I/O範例
-![]https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG
+![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG)
+![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/3.JPG)
+![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/4.JPG)
+![](https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/5.JPG)
