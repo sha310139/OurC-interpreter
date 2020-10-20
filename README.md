@@ -24,8 +24,8 @@ Dev C++<br>
 
 ## 檔案說明
 * Our-C-Grammar-2016-07-15.doc : 文法及支援token的清單
-* PL_Priject4.cpp : 主程式碼
-* PL_Priject4.exe : 程式執行檔
+* PL_Project4.cpp : 主程式碼
+* PL_Project4.exe : 程式執行檔
 * 測資 : 含複雜function運算的輸入檔及輸出檔
 <br>
 <br>
