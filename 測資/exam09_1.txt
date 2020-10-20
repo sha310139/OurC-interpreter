@@ -1,0 +1,454 @@
+1
+// ========== Proj. 4    Prob. 9   Test 1/3 (viewable) ============
+
+  // =========== Proj. 3 tests (from Prob. 3&4) START =========
+
+  // string *cs1 = new string( "Hi" ), *cs2 = new string( "Hello" ) ;
+  // cs1->append( *cs2 ) ;
+  // cout << *cs1 << "\n" ;
+
+  // preparation
+
+  int a1, a2, a3 ;
+  float f1, f2, f3 ;
+  bool b1, b2, b3 ;
+  string s1, s2, s3 ;
+  char c1, c2, c3 ;
+  int a[10], b[10] ;
+  string s[10] ;
+  int i, j, k ;
+  
+  // Problem 3 : test data 1/3 ( viewable )
+
+  a1 = 10 ;
+  a2 = 20 ;
+  a3 = -30 ;
+  f1 = 1.5 ;
+  f2 = 0.25 ;
+  f3 = -0.125 ;
+  s1 = "Hi" ;
+  s2 = "Hello" ;
+  s3 = "What" ;
+  c1 = 'a' ;
+  c2 = 'b' ;
+  c3 = 'c' ;
+  b1 = b2 = b3 = false ;
+  
+  i = j = k = 0 ;
+  
+  while ( i < 10 ) {
+    a[i] = 10 ;
+    b[i] = 20 ;
+    s[i] = "Bravo" ;
+    i++ ;
+  } // while i < 10
+
+  // + - * / %
+  cout << ( a[1] = a2 = a[2]+a[3]*a[3]-a1-a2-a[4]%50 ) << "\n" ;
+  cout << a[1]-305%a[2]-300/a[3]- ( a[3] = a2-a[4] ) %50 << "\n" ;
+  cout << a[1]-305%a[2]- ( a[3] = a2-a[4] ) %50-300/a[3] << "\n" ;
+  cout << ( a[2] = 300 / ( a[2]+a[1] ) +a1 ) +10+a[2] << "\n" ;  
+  cout << a[1]- - ( a[2]-a3*a[3] ) << "\n" ;
+
+  // << >>
+  cout << a[2] << "\n" ;
+  cout << ( a[2] = ( a[2] << 2 ) -a2-a[1]/2*3%25 ) << "\n" ;
+  cout << ( a[1] = a[2] = ( a[2] >> 2 ) + a[1]%a[2] ) << "\n" ;
+
+  // && || ! < <= > >=  ==   !=
+  cout << ( b1 = f1-a[2]*f1+a2 > f2-a[2]*f1+a2 ) << "\n" ;
+  cout << ( b2 = a[1]+a[2] >= a[3]%35 ) << "\n" ;
+  cout << ( b3 = b1 && ( b2 || a[3] >= a[2]%a[1] ) ) << "\n" ;
+  cout << ( b3 = b3 || ( a[1]*a3 < a[2]*a2 && ! ( b2 || a[3] >= a[2]%a[1] ) ) ) << "\n" ;
+
+  cout << ( ! ( a[1] == a[1]*2-a[1] ) && b3 ) << "\n" ;
+  cout << ( b3 || a[1] != a[1]*2-a[1] || ! ( a2 > a[2] ) ) << "\n" ;
+  cout << ( b3 || ( a[1] != a[1]*2-a[1] && true ) || ! ( a2 > a[2] || false ) ) << "\n" ;
+  // cout << ( true && false == false ) << "\n" ; // '==' and '!=' should not be
+  // cout << ( true || true != false ) << "\n" ;  // applied to booleans
+
+  // string
+  cout << ( s[2] = ( s[1] = s[1] + " " + s[2] ) + "!Hello!" + s[1] ) << "\n" ;
+  cout << s[1] << "\n" << s[2] << "\n" ;
+  cout << ( s[3] = s[2] + c1 + ( s[2] = s1 + s3 ) + s3 + s[2] ) << "\n" ;
+  cout << s[1] + "\n" + s[2] + "\n" + s[3] << "\n" ;
+
+  // =========== Proj. 3 tests (from Prob. 3&4) + while END   =========
+  
+  cout << "------------ Proj. 3 test end --------------\n" ;
+
+int gA, gY ; // 'gY', a to be used global, has to be declared in advance
+int gW[ 10 ], gV[ 10 ] ;
+string gS[ 10 ] ;
+  gY = 3 ;
+  gA = 20 ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    gW[i] = a1*i + 10 ;
+    gV[i] = a2*i + 20 ;
+    gS[i] = "Q" ;
+    i++ ;
+  } // while i < 10
+  
+  i = 0 ;
+
+  cout << "------------ global init end --------------\n" ;
+
+void F91( int a, int & b, int c, int & d ) {
+  a = a + 5 ;
+  b = b - 2 ;
+  c = c - 1 ;
+  d = d + 3 ;
+} // F91()
+
+int F81( int c, int & d, int w[ 10 ], int p[ 10 ], string t, string & u, string ss[ 10 ] ) {
+
+  // new
+  F91( c, d, w[2], d ) ;
+  F91( w[3], p[4], w[9], p[0] ) ;
+  F91( w[2], p[5], p[1], d ) ;
+
+  int c1, d1 ;
+  c1 = c ;
+  d1 = d ;
+  if ( c1 < 0 )
+    c1 = -c1 ;
+  if ( d1 < 0 )
+    d1 = -d1 ;
+    
+  c = gW[ c1%10 ] + gV[ d1%10 ] ;
+  d = gA + c ;
+  
+  int i ;
+  i = 0 ;
+  while ( i < 10 ) {
+    w[i] = w[i]+1 ;
+    p[i] = 2+p[i] ;
+    ss[i] = ss[i]+"3" ;
+    i++ ;
+  } // while
+  
+  t = t+"4" ;
+  u = "5"+u ;
+  
+  return c+d ;
+
+} // F81()
+
+int F82( int c, int & d, int w[ 10 ], int p[ 10 ], string t, string & u, string ss[ 10 ] ) {
+
+  cout << "F82() starts.\n" ;
+
+  int f81a, f81b, f81c ;
+  int f81d ;
+  
+  f81c = F81( c, c, w, w, t, t, ss ) ;
+  
+  cout << "f81c : " << f81c << " c : " << c
+       << " t : '" << t << "' u : '" << u << "'\n" ; 
+  
+  f81d = F81( d, d, p, p, u, u, ss ) ;
+  
+  cout << "f81d : " << f81d << " d : " << d
+       << " t : '" << t << "' u : '" << u << "'\n" ; 
+  
+  f81a = F81( c, d, w, p, t, u, ss ) ;
+  
+  cout << "f81a : " << f81a << " c : " << c << " d : " << d
+       << " t : '" << t << "' u : '" << u << "'\n" ; 
+  
+  f81b = F81( d, c, p, w, u, t, ss ) ;
+  
+  cout << "f81b : " << f81b << " c : " << c << " d : " << d
+       << " t : '" << t << "' u : '" << u << "'\n" ; 
+  
+  cout << "F82() ends.\n" ;
+  
+  return f81a+f81b-f81c-f81d ;
+
+} // F82()
+
+int F51( int c, int & d, int w[ 10 ], int p[ 10 ], string t, string & u, string ss[ 10 ] ) {
+// be sure to initialize all parameters and all globals before calling this routine
+  
+  cout << "\nF51() - start.\n" ;
+
+  int gA ;
+  
+  gA = gY = c - d + F82( c, d, w, p, t, u, ss ) ;
+  c -= d += gA + gY - F82( c, d, w, p, t, u, ss ) ;
+  
+  int gW[ 10 ] ;
+  
+  int i ;
+  i = 0 ;
+  while ( i < 10 ) {
+    gW[i] = w[i]+p[i] ;
+    gV[i] = 2*p[i]-w[i] ;
+    w[i] = w[i] - i ;
+    p[i] = p[i] + i ;
+    ss[i] = ss[i] + " Wa " ;
+    i++ ;
+  } // while i < 10
+  
+  int gY ;
+  
+  gA += gY = 3 ;  
+  
+  int gV[ 10 ] ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    gW[i] += gY ;
+    gV[i] = gA-gW[i] ;
+    w[i] = w[i] - gY ;
+    p[i] = p[i] + gA ;
+    i++ ;
+  } // while i < 10
+  
+  int a[ 10 ] ; // int b[ 10 ] ;
+  string s[ 10 ] ;
+  int a1 ; // a2, a3 ;
+  string s1 ; // s2, s3 ;
+  
+  s1 = t ;
+  t = u + " Ha " ;
+  u = s1 + " Hi " ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    a[i] = w[i] + 10 ;
+    s[i] = ss[i] + " Hi " ;
+    if ( i%2 == 0 )
+      ss[i] = s[i] ;
+    i++ ;
+  } // while i < 10
+  
+  a1 = gW[ 3 ] ;
+  s1 = s[ 5 ] ;
+  
+  a1 -= gA ;
+  a[3] += a[5] += gW[2] - a1 ;
+  s1 = s1 + " ChungLi " ;
+  
+  if ( gW[7] < 0 )
+    gW[7] = -gW[7] ;
+  
+  if ( gV[8] < 0 )
+    gV[8] = -gV[8] ;
+  
+  if ( a[3] < 0 )
+    a[3] = -a[3] ;
+  
+  cout << "F51() - end.\n" ;
+
+  return gW[ gV[8]%10 ] + gV[ ( 3+gW[7] ) %10 ] + a[ a[3]%10 ] ;
+  
+} // F51()
+
+string F52( int c, int & d, int w[ 10 ], int p[ 10 ], string t, string & u, string ss[ 10 ] ) {
+// be sure to initialize all parameters and all globals before calling this routine
+  
+  cout << "\nF52() - start.\n" ;
+
+  int gA ;
+  
+  gA = gY = c - d ;
+  c -= d += gA + gY ;
+  
+  int gW[ 10 ] ;
+  
+  int i ;
+  i = 0 ;
+  while ( i < 10 ) {
+    gW[i] = w[i]+p[i] ;
+    gV[i] = 2*p[i]-w[i] ;
+    w[i] = w[i] - i ;
+    p[i] = p[i] + i ;
+    ss[i] = ss[i] + " Wa " ;
+    i++ ;
+  } // while i < 10
+  
+  int gY ;
+  
+  gA += gY = 3 ;  
+  
+  int gV[ 10 ] ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    gW[i] += gY ;
+    gV[i] = gA-gW[i] ;
+    w[i] = w[i] - gY ;
+    p[i] = p[i] + gA ;
+    i++ ;
+  } // while i < 10
+  
+  int a[ 10 ] ; // int b[ 10 ] ;
+  string s[ 10 ] ;
+  int a1 ; // a2, a3 ;
+  string s1 ; // s2, s3 ;
+  
+  s1 = t ;
+  t = u + " Ha " ;
+  u = s1 + " Hi " ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    a[i] = w[i] + 10 + i ;
+    s[i] = ss[i] + " Hi " ;
+    if ( i%2 == 1 )
+      ss[i] = s[i] ;
+    i++ ;
+  } // while i < 10
+  
+  a1 = gW[ 3 ] ;
+  s1 = s[ 5 ] ;
+  
+  a1 -= gA ;
+  a[3] += a[5] += gW[2] - a1 ;
+  s1 = s1 + " ChungLi " ;
+  
+  if ( gW[5] < 0 )
+    gW[5] = -gW[5] ;
+  
+  if ( gV[4] < 0 )
+    gV[4] = -gV[4] ;
+  
+  if ( a[9] < 0 )
+    a[9] = -a[9] ;
+  
+  p[5] = w[2] = gW[ gV[4]%10 ] + gV[ ( 3+gW[5] ) %10 ] + a[ a[9]%10 ] ;
+  
+  cout << "F52() - end.\n" ;
+
+  return s1 + ss[ 5 ] + s[ 2 ] ;
+  
+} // F52()
+
+  cout << "------------ global init end --------------\n" ;
+
+  cout << "F51( a1, gY, a, gV, s1, s2, s ) : " 
+       <<  F51( a1, gY, a, gV, s1, s2, s ) 
+       << "\n" ;
+  
+  cout << "a1 : " << a1 << " gY : " << gY << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "F51( a[3], b[7], a, gV, s1, s2, s ) : " 
+       <<  F51( a[3], b[7], a, gV, s1, s2, s ) 
+       << "\n" ;
+  
+  cout << "a[3] : " << a[3] << " b[7] : " << b[7] << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "F51( b[9], a[5], b, a, s2, s1, s ) : " 
+       <<  F51( b[9], a[5], b, a, s2, s1, s ) 
+       << "\n" ;
+  
+  cout << "a[5] : " << a[5] << " b[9] : " << b[9] << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "gA+a2+2+F51( gA, a2, gW, b, s2, s1, gS )+3+gA+a2 : " 
+       <<  gA+a2+2+F51( gA, a2, gW, b, s2, s1, gS )+3+gA+a2 
+       << "\n" ;
+       
+  cout << "gA : " << gA << " a2 : " << a2 << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "a1+a2+2+F51( a1, a2, a, b, s2, s1, gS )+3+a1+a2 : " 
+       <<  a1+a2+2+F51( a1, a2, a, b, s2, s1, gS )+3+a1+a2 
+       << "\n" ;
+       
+  cout << "a1 : " << a1 << " a2 : " << a2 << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "a[6]+a[6]+2+F51( a[6], a[6], a, b, s2, s1, gS )+3+a[6]+a[6] : " 
+       <<  a[6]+a[6]+2+F51( a[6], a[6], a, b, s2, s1, gS )+3+a[6]+a[6] 
+       << "\n" ;
+       
+  cout << "a[6] : " << a[6] << " a[6] : " << a[6] << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "a[1]+b[0]+2+F51( a[1], b[0], a, b, s2, s1, gS )+3+a[1]+b[0] : " 
+       <<  a[1]+b[0]+2+F51( a[1], b[0], a, b, s2, s1, gS )+3+a[1]+b[0] 
+       << "\n" ;
+       
+  cout << "a[1] : " << a[1] << " b[0] : " << b[0] << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "a[8]+b[4]+2+F51( a[8], b[4], b, a, s1, s1, gS )+3+a[8]+b[4] : " 
+       <<  a[8]+b[4]+2+F51( a[8], b[4], b, a, s1, s1, gS )+3+a[8]+b[4] 
+       << "\n" ;
+       
+  cout << "a[8] : " << a[8] << " b[4] : " << b[4] << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "a[8]+b[4]+2+F51( a[8], b[4], a, a, s1, s1, gS )+3+a[8]+b[4] : " 
+       <<  a[8]+b[4]+2+F51( a[8], b[4], a, a, s1, s1, gS )+3+a[8]+b[4] 
+       << "\n" ;
+       
+  cout << "a[8] : " << a[8] << " b[4] : " << b[4] << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "F52( gA, gY, gW, gV, s2, s2, s ) + ' OK?' : " 
+       <<  F52( gA, gY, gW, gV, s2, s2, s ) + " OK?" << "\n" ;
+  
+  cout << "-----------Simple Variables-------------\n" ;
+  
+  cout << "gA : " << gA << " gY : " << gY
+       << " a1 : " << a1 << " a2 : " << a2 
+       << " s1 : " << s1 << " s2 : " << s2 << "\n" ;
+  
+  cout << "i : " << i << "\n" ;
+  
+  cout << "-----------gW[]-------------\n" ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    cout << gW[ i ] << " " ;
+    i++ ;
+  } // while
+  
+  cout << "\n-----------gV[]-------------\n" ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    cout << gV[ i ] << " " ;
+    i++ ;
+  } // while
+
+  cout << "\n-----------a[]-------------\n" ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    cout << a[ i ] << " " ;
+    i++ ;
+  } // while
+
+  cout << "\n-----------b[]-------------\n" ;
+  
+  i = 0 ;
+  while ( i < 10 ) {
+    cout << b[ i ] << " " ;
+    i++ ;
+  } // while
+
+  cout << "\n-----------gS[]-------------\n" ;
+  
+  i = 0 ;
+  while ( i < 5 ) {
+    cout << gS[ i ] << "\n" ;
+    i++ ;
+  } // while
+
+  cout << "-----------s[]-------------\n" ;
+  
+  i = 0 ;
+  while ( i < 5 ) {
+    cout << s[ i ] << "\n" ;
+    i++ ;
+  } // while
+
+  // ===========================================================
+  // ============= also copy the following to PAL ==============
+  // ===========================================================
+
+  cout << "---This cout-stmt is not part of the test data.---" ;
+
+Done   (  
+  ) 
+     ;cout << 10 ; // Program execution
+  cout << 3+5 ;     // should not come here.
