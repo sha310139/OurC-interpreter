@@ -1,6 +1,6 @@
 # OurC-interpreter
 一個約5000行的類C語言直譯器(可執行迴圈和functions)<br>
-此專案為中原大學「程式語言」必修課之project 占分70%<br>
+此專案為中原大學「程式語言」必修課之project(占分70%)<br>
 共分成4個部分<br>
 Project 1為 基礎運算式檢查、求值及變數宣告<br>
 Project 2為 簡單C語言的文法檢查<br>
