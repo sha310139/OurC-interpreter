@@ -5,9 +5,10 @@
 Project 1為 基礎運算式檢查、求值及變數宣告<br>
 Project 2為 簡單C語言的文法檢查<br>
 Project 3為 Project 2的進階，需要確認文法的正確性並且求出值<br>
-Porject 4為 Project 3的進階，加上Call function並執行的功能<br>
+Project 4為 Project 3的進階，加上Call function並執行的功能<br>
 每個project會有10-16題的測試，每一題約有3-4個測試數據(包含可見數據及隱藏數據)<br>
 本人完成4個projects，通過所有測試，於此作業拿到滿分，且本班僅兩位滿分。<br>
+程式碼部分為Project4，已整合Project2-4所有功能<br>
 此為個人作品。<br>
 <br>
 <br>
@@ -24,8 +25,8 @@ Dev C++<br>
 
 ## 檔案說明
 * Our-C-Grammar-2016-07-15.doc : 文法及支援token的清單
-* PL_Project4.cpp : 主程式碼
-* PL_Project4.exe : 程式執行檔
+* PL_Project_4.cpp : 主程式碼
+* PL_Project_4.exe : 程式執行檔
 * 測資 : 含複雜function運算的輸入檔及輸出檔
 <br>
 <br>
