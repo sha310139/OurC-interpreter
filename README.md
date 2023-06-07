@@ -1,47 +1,46 @@
 # OurC-interpreter
-一個約5000行的類C語言直譯器(可執行迴圈和functions)<br>
-此專案為中原大學「程式語言」必修課之project(占分70%)<br>
-共分成4個部分<br>
-Project 1為 基礎運算式檢查、求值及變數宣告<br>
-Project 2為 簡單C語言的文法檢查<br>
-Project 3為 Project 2的進階，需要確認文法的正確性並且求出值<br>
-Project 4為 Project 3的進階，加上Call function並執行的功能<br>
-每個project會有10-16題的測試，每一題約有3-4個測試數據(包含可見數據及隱藏數據)<br>
-本人完成4個projects，通過所有測試，於此作業拿到滿分，且本班僅兩位滿分。<br>
-程式碼部分為Project4，已整合Project2-4所有功能<br>
-此為個人作品。<br>
+A C-like interpreter of about 5000 lines (executable loops and functions)<br>
+Divided into 4 parts<br>
+Project 1 is checking, evaluating and declaring variables of basic expressions<br>
+Project 2 is a grammar checker for simple C language<br>
+Project 3 is an advanced project of Project 2. It is necessary to confirm the correctness of the grammar and find the value<br>
+Project 4 is an advanced version of Project 3, plus the function of Call function and execution<br>
+Each project will have 10-16 test questions, and each question has about 3-4 test data (including visible data and hidden data)<br>
+I completed 4 projects, passed all the tests, and got full marks for this homework, and there are only two full marks in this class. <br>
+The code part is Project4, which has integrated all the functions of Project2-4<br>
+
 <br>
 <br>
 
-## 開發平台
+## OS
 Windows10<br>
 <br>
 <br>
 
-## 開發環境
+## Environment
 Dev C++<br>
 <br>
 <br>
 
-## 檔案說明
-* Our-C-Grammar-2016-07-15.doc : 文法及支援token的清單
-* PL_Project_4.cpp : 主程式碼
-* PL_Project_4.exe : 程式執行檔
-* 測資 : 含複雜function運算的輸入檔及輸出檔
+## Files
+* Our-C-Grammar-2016-07-15.doc
+* PL_Project_4.cpp
+* PL_Project_4.exe
+* 測資 : Input & Output
 <br>
 <br>
 
-## 功能
-* 根據輸入的字串，判斷是否為正確的C語言文法並求出運算值
-* 當輸入錯誤時會印出該錯誤之行數及錯誤類型(lexical error、syntactical error (token recognized)、semantic error (grammar ok))
-* 支援語法包含if、else、while、cout、define function等等
-* 支援陣列宣告及陣列值的運算
-* 支援全域及區域變數的宣告
-* 提供 ListVariable("變數名稱")、ListAllVariables()、 ListFunction("名稱")、ListAllFunctions() 等4個功能函數
-* 可以根據輸入的字串 判斷是否為正確的C語言文法及輸出運算
-* 可define functions(包含遞迴、function裡再call別的function等等)及執行functions
-* function參數傳遞支援call by reference & call by value
-* 輸入 Done(); 可使程式結束執行
+## Functions
+* According to the input string, judge whether it is correct C language grammar and calculate the operation value
+* When an error is entered, the line number and error type of the error will be printed (lexical error, syntactical error (token recognized), semantic error (grammar ok))
+* Support syntax includes if, else, while, cout, define function, etc.
+* Support array declaration and operation of array value
+* Support declaration of global and regional variables
+* Provide 4 functional functions such as ListVariable("variable name"), ListAllVariables(), ListFunction("name"), ListAllFunctions()
+* Can judge whether it is correct C language grammar and output operation according to the input string
+* Can define functions (including recursion, call other functions in function, etc.) and execute functions
+* Function parameter transfer supports call by reference & call by value
+* Enter Done(); to end the execution of the program
 <br>
 <br>
 
@@ -55,31 +54,25 @@ enter後將顯示互動式介面資訊<br>
 <br>
 <br>
 
-## I/O範例
-* 簡單function defined及執行<br>
+## I/O example
+* function defined and run<br>
 <img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/2.JPG" alt="Sample"  width="500">
 <br>
 <br>
 -----------------------------------------------------------------<br>
 
-* 陣列及迴圈運算<br>
+* array and for loop calculation<br>
 <img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/3.JPG" alt="Sample"  width="300">
 <br>
 <br>
 -----------------------------------------------------------------<br>
 
-* function defined、執行、error顯示及功能函數運算<br>
+* function defined, run, and output errors<br>
 <img src="https://github.com/sha310139/OurC-interpreter/blob/main/Pictures/5.JPG" alt="Sample"  width="500">
 <br>
 <br>
 
-## 複雜function call範例
-由於執行數據龐大，截圖不易<br>
-因此直接將I/O輸出複製貼上<br>
-若有興趣可參考
-
-    /測資/exam09_1.txt
-<br>
+## function call example
 
     1
     Our-C running ...
