@@ -1,4 +1,6 @@
 # OurC-interpreter
+※抄襲後果自負※
+
 A C-like interpreter of about 5000 lines (executable loops and functions)<br>
 Divided into 4 parts<br>
 Project 1 is checking, evaluating and declaring variables of basic expressions<br>
